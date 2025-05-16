@@ -1,227 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hemu Sai Prakashreddy Devarapalli | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to bottom right, #e0f7fa, #f1f8e9);
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #004d40;
-      color: #fff;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    header h1 { font-size: 3rem; }
-    header p { font-size: 1.2rem; margin-top: 0.5rem; }
-    nav {
-      background: #ffffff;
-      padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-    }
-    nav ul li { margin: 0 1.5rem; }
-    nav ul li a {
-      text-decoration: none;
-      color: #004d40;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    nav ul li a:hover { color: #00796b; }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2.5rem;
-      color: #00796b;
-    }
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .work-card {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .work-card:hover { transform: scale(1.05); }
-    .resume, .contact, .dashboard, .projects {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .project-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .project-gallery img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      object-fit: cover;
-    }
-    .contact form {
-      display: flex;
-      flex-direction: column;
-    }
-    .contact input,
-    .contact textarea {
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    .contact button {
-      padding: 0.8rem;
-      background: #004d40;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .contact button:hover { background: #00796b; }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #004d40;
-      color: white;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="hemusaiprakashreddy@usf.edu-0779ba38.jpg" alt="Hemu Sai Prakashreddy Devarapalli">
-    <h1>Hemu Sai Prakashreddy Devarapalli</h1>
-    <p style="font-size: 1.1rem; margin-top: 0.2rem;">Master of Science in Business Analytics and Information Systems<br>University of South Florida, Muma College of Business</p>
-    <p>Data & Cloud Engineer | Business Analytics | MS @ USF</p>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#projects">ML Project</a></li>
-      <li><a href="#dashboard">Data Dashboard</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+# Define a visually formatted and professional Contact section
+styled_contact_section = """
+<section id="contact">
+  <h2>Contact</h2>
+  <p><strong>Email:</strong> <a href="mailto:hemusaiprakashreddy@usf.edu">hemusaiprakashreddy@usf.edu</a></p>
+  <p><strong>Phone:</strong> <a href="tel:+18133979756">+1 (813) 397-9756</a></p>
+  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hemusaiprakashreddydevarapalli" target="_blank">linkedin.com/in/hemusaiprakashreddydevarapalli</a></p>
+</section>
+"""
 
-  <section id="work">
-    <h2>Professional Experience</h2>
-    <div class="work-grid">
-      <div class="work-card">
-        <h3>Vinik Sports Group</h3>
-        <p>Engineered robust data pipelines using Snowflake and AWS S3. Reduced report load time by 40% with optimized SQL and built scalable ELT workflows with Airflow and Python.</p>
-      </div>
-      <div class="work-card">
-        <h3>Aramark</h3>
-        <p>Processed 3TB/day of data with Hadoop ecosystem. Enabled real-time analytics using Kafka, NiFi, and CI/CD pipelines with Jenkins and GitHub.</p>
-      </div>
-      <div class="work-card">
-        <h3>Tata Elxsi</h3>
-        <p>Developed ETL workflows from Oracle DB. Created Tableau dashboards, analyzed survey data with Hadoop POC, and explored Snowflake performance optimization.</p>
-      </div>
-    </div>
-  </section>
+# Load the previously saved HTML with styled skills section
+html_path = "/mnt/data/hemu_portfolio_final_styled_skills.html"
+with open(html_path, "r", encoding="utf-8") as file:
+    html_content = file.read()
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <div class="resume">
-      <h3>Education</h3>
-      <p><strong>University of South Florida, Muma College of Business</strong>, Master of Science in Business Analytics and Information Systems – May 2025</p>
-      <p><strong>Saveetha University</strong>, BE in Biomedical Engineering – May 2022</p>
-      <h3>Skills</h3>
-      <p><strong>Languages:</strong> Python, R, SQL, Pandas, NumPy</p>
-      <p><strong>Tools:</strong> Power BI, Tableau, Git, Docker, Jira</p>
-      <p><strong>Cloud & DevOps:</strong> AWS (S3, EC2, Lambda), Azure, Terraform, OpenShift</p>
-      <p><strong>Big Data:</strong> Hadoop, Spark, Hive, Kafka, NiFi</p>
-      <p><strong>Other:</strong> ETL, KPI Reporting, Data Governance, Agile</p>
-    </div>
-  </section>
+# Replace the old contact section with the styled one
+html_content = re.sub(r"<section id=\"contact\">.*?</section>", styled_contact_section, html_content, flags=re.DOTALL)
 
-  <section id="projects">
-    <h2>Ocular Disease ML Project</h2>
-    <div class="projects">
-      <p>Worked on diagnosing ocular diseases using image classification models trained on real medical datasets, applying CNNs and transfer learning with high accuracy.</p>
-      <div class="project-gallery">
-        <img src="https://storage.googleapis.com/kagglesdsdata/datasets/2532152/4333616/normal.jpg" alt="Normal Retina">
-        <img src="https://storage.googleapis.com/kagglesdsdata/datasets/2532152/4333616/diabetic_retinopathy.jpg" alt="Diabetic Retinopathy">
-        <img src="https://storage.googleapis.com/kagglesdsdata/datasets/2532152/4333616/glaucoma.jpg" alt="Glaucoma Retina Scan">
-        <img src="https://storage.googleapis.com/kagglesdsdata/datasets/2532152/4333616/retinal_vessel.jpg" alt="Retinal Vessel Segmentation">
-      </div>
-    </div>
-  </section>
+# Save the updated HTML
+final_contact_html_path = "/mnt/data/hemu_portfolio_final_contact.html"
+with open(final_contact_html_path, "w", encoding="utf-8") as file:
+    file.write(html_content)
 
-  <section id="dashboard">
-    <h2>Live Data Dashboard</h2>
-    <div class="dashboard">
-      <canvas id="cloudChart" width="400" height="200"></canvas>
-    </div>
-    <script>
-      const ctx = document.getElementById('cloudChart').getContext('2d');
-      const cloudChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-          datasets: [{
-            label: 'Cloud Usage (GB)',
-            data: [120, 150, 180, 130, 210, 250],
-            backgroundColor: 'rgba(0, 150, 136, 0.2)',
-            borderColor: '#00796b',
-            borderWidth: 2,
-            tension: 0.4,
-            fill: true
-          }]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            y: { beginAtZero: true }
-          }
-        }
-      });
-    </script>
-  </section>
+# Create zip archive
+final_contact_zip_path = "/mnt/data/hemu_portfolio_final_contact.zip"
+with ZipFile(final_contact_zip_path, "w") as zipf:
+    zipf.write(final_contact_html_path, arcname="hemu_portfolio_final_contact.html")
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <form action="mailto:hemusaiprakashreddy@usf.edu" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+final_contact_zip_path
 
-  <footer>
-    <p>&copy; 2025 Hemu Sai Prakashreddy Devarapalli. Built with passion and purpose.</p>
-  </footer>
-</body>
-</html>
