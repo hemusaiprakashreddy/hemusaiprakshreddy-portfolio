@@ -1,30 +1,191 @@
-# Define a visually formatted and professional Contact section
-styled_contact_section = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hemu Sai Prakashreddy Devarapalli | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #f1f8e9);
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #004d40;
+      color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    header h1 { font-size: 3rem; }
+    header p { font-size: 1.1rem; margin-top: 0.5rem; }
+    nav {
+      background: #ffffff;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+    nav ul li { margin: 0 1.5rem; }
+    nav ul li a {
+      text-decoration: none;
+      color: #004d40;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav ul li a:hover { color: #00796b; }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: #00796b;
+    }
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .work-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .work-card:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="cropped-IMG_4621.jpeg" alt="Hemu Sai Prakashreddy Devarapalli">
+    <h1>Hemu Sai Prakashreddy Devarapalli</h1>
+    <p>Master of Science in Business Analytics and Information Systems<br>University of South Florida, Muma College of Business</p>
+    <p>Data & Cloud Engineer | Business Analytics | MS @ USF</p>
+  </header>
+
+  
+<nav>
+  <ul>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#work">Professional Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+  
+
+
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a Master’s student in Business Analytics and Information Systems at the University of South Florida, graduating in May 2025. With hands-on experience in Hadoop, Snowflake, and advanced SQL, I specialize in building scalable data pipelines and cloud-based ELT frameworks. I’ve worked on real-time data ingestion, dimensional data modeling, and analytics solutions that drive business decision-making. Passionate about big data technologies and cloud platforms, I aim to transform complex data into actionable insights for enterprise success.</p>
+</section>
+
+<section id="work">
+    <h2>Professional Experience</h2>
+    <div class="work-grid">
+      <div class="work-card">
+        <h3>Vinik Sports Group</h3>
+        <p>Engineered robust data pipelines using Snowflake, integrating structured and semi-structured data from AWS S3 and on-premise sources. Developed and optimized SQL scripts for data transformation, validation, and performance tuning, reducing report load time by 40%. Created scalable ELT workflows using Snowpipe, Airflow, and Python, improving data freshness for analytics dashboards. Enabled cost optimization in Snowflake by implementing virtual warehouse auto-suspend and data clustering strategies.</p>
+      </div>
+      <div class="work-card">
+        <h3>Aramark</h3>
+        <p>Built large-scale data ingestion frameworks using the Hadoop ecosystem (Hive, Pig, HDFS) to process over 3 TB/day of IoT and clickstream data. Converted batch processes into near real-time data pipelines using Apache NiFi and Kafka, enabling rapid decision-making. Designed and maintained dimensional models for BI reporting using SparkSQL and Hive Metastore. Worked with DevOps to automate deployments via Jenkins and Git-based CI/CD workflows.</p>
+      </div>
+      <div class="work-card">
+        <h3>Tata Elxsi</h3>
+        <p>Assisted in building SQL-based ETL processes to extract data from Oracle DB and load into staging environments for analytics use. Created dashboards and reports using Tableau to visualize key metrics on customer churn and sales conversion. Participated in a Hadoop POC to analyze unstructured survey data, learning HDFS data management basics. Gained exposure to Snowflake trial environments, exploring query performance and virtual warehouse scaling.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div style="margin-bottom: 2rem;">
+    <h3 style="color: #00796b;">Programming Languages</h3>
+    <ul>
+      <li><strong>SQL:</strong> Advanced in writing complex queries, stored procedures, and performance-optimized joins for large-scale data operations.</li>
+      <li><strong>Python:</strong> Skilled in automation scripts, data manipulation, and analytics using Pandas, NumPy, PySpark.</li>
+      <li><strong>Java:</strong> Backend development experience with multithreading and OOP principles.</li>
+    </ul>
+  </div>
+
+  <div style="margin-bottom: 2rem;">
+    <h3 style="color: #00796b;">Big Data & Cloud Technologies</h3>
+    <ul>
+      <li><strong>Snowflake:</strong> Built ELT pipelines with Snowpipe & Airflow, handled real-time data warehousing and analytics.</li>
+      <li><strong>Hadoop Ecosystem:</strong> Worked with HDFS, Hive, and Pig for batch processing and managing unstructured data.</li>
+      <li><strong>Apache NiFi & Kafka:</strong> Designed ingestion workflows and real-time streaming pipelines.</li>
+    </ul>
+  </div>
+
+  <div style="margin-bottom: 2rem;">
+    <h3 style="color: #00796b;">Data Engineering & Workflow Orchestration</h3>
+    <ul>
+      <li><strong>Apache Airflow:</strong> Scheduled and orchestrated ETL workflows with dependency handling.</li>
+      <li><strong>Apache Spark:</strong> Performed distributed in-memory data processing using SparkSQL and PySpark.</li>
+      <li><strong>Hive & Pig:</strong> Executed complex queries and data transformation in Hadoop environments.</li>
+    </ul>
+  </div>
+
+  <div style="margin-bottom: 2rem;">
+    <h3 style="color: #00796b;">Visualization & BI Tools</h3>
+    <ul>
+      <li><strong>Tableau:</strong> Created dashboards with interactive filters and real-time data connections.</li>
+      <li><strong>Power BI:</strong> Built executive dashboards using DAX and SQL-integrated datasets.</li>
+    </ul>
+  </div>
+
+  <div style="margin-bottom: 2rem;">
+    <h3 style="color: #00796b;">DevOps & Version Control</h3>
+    <ul>
+      <li><strong>Git & GitHub:</strong> Experienced in collaborative version control, PR workflows, and branching strategies.</li>
+      <li><strong>Jenkins:</strong> Built CI/CD pipelines for automated deployment and testing.</li>
+      <li><strong>CI/CD Tools:</strong> Familiar with full automation lifecycle for cloud-based deployments.</li>
+    </ul>
+  </div>
+</section>
+
+
+
+
 <section id="contact">
   <h2>Contact</h2>
   <p><strong>Email:</strong> <a href="mailto:hemusaiprakashreddy@usf.edu">hemusaiprakashreddy@usf.edu</a></p>
   <p><strong>Phone:</strong> <a href="tel:+18133979756">+1 (813) 397-9756</a></p>
   <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hemusaiprakashreddydevarapalli" target="_blank">linkedin.com/in/hemusaiprakashreddydevarapalli</a></p>
 </section>
-"""
 
-# Load the previously saved HTML with styled skills section
-html_path = "/mnt/data/hemu_portfolio_final_styled_skills.html"
-with open(html_path, "r", encoding="utf-8") as file:
-    html_content = file.read()
 
-# Replace the old contact section with the styled one
-html_content = re.sub(r"<section id=\"contact\">.*?</section>", styled_contact_section, html_content, flags=re.DOTALL)
-
-# Save the updated HTML
-final_contact_html_path = "/mnt/data/hemu_portfolio_final_contact.html"
-with open(final_contact_html_path, "w", encoding="utf-8") as file:
-    file.write(html_content)
-
-# Create zip archive
-final_contact_zip_path = "/mnt/data/hemu_portfolio_final_contact.zip"
-with ZipFile(final_contact_zip_path, "w") as zipf:
-    zipf.write(final_contact_html_path, arcname="hemu_portfolio_final_contact.html")
-
-final_contact_zip_path
-
+</body>
+</html>
