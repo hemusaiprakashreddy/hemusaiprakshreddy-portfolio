@@ -2,116 +2,223 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hemu Sai Prakashreddy | Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+    /* CSS Reset */
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
     header {
-      background-color: #0a9396;
+      background: linear-gradient(135deg, #0a9396, #005f73);
       color: white;
-      padding: 2rem;
+      padding: 4rem 2rem;
       text-align: center;
     }
-    .container {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
       background-color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-      margin-top: 2rem;
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
     }
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
+
+    nav ul li {
+      margin: 0 1rem;
     }
-    .contact a {
-      color: #0a9396;
+
+    nav ul li a {
       text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
-    .profile-img {
-      display: block;
-      margin: 1rem auto;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
+
+    nav ul li a:hover {
+      color: #0a9396;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #0a9396;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .work-item {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .work-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .work-item h3 {
+      margin-bottom: 0.5rem;
+      color: #005f73;
+    }
+
+    .resume, .contact {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact form input,
+    .contact form textarea {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact form button {
+      padding: 0.7rem;
+      border: none;
+      background-color: #0a9396;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact form button:hover {
+      background-color: #005f73;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #e0e0e0;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Hemu Sai Prakashreddy Devarapalli</h1>
+    <h1>Hemu Sai Prakashreddy</h1>
     <p>Data & Cloud Engineer | Business Analytics | MS @ USF</p>
   </header>
-  <div class="container">
-    <img src="cropped-IMG_4621.jpeg" alt="Hemu Sai Prakashreddy" class="profile-img" />
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I'm a data-driven engineering professional with experience building scalable data pipelines, analytics platforms, and BI solutions using tools like Snowflake, Hadoop, Kafka, and AWS. Currently pursuing my MS in Business Analytics and Information Systems at the University of South Florida.
-      </p>
-    </section>
 
-    <section>
-      <h2>Professional Experience</h2>
-      <h3>Vinik Sports Group, Tampa, FL <small>(Feb 2025 – Present)</small></h3>
-      <ul>
-        <li>Engineered robust data pipelines using Snowflake with AWS S3 integration.</li>
-        <li>Reduced report load time by 40% through optimized SQL scripts.</li>
-        <li>Built scalable ELT workflows with Airflow, Python, and Snowpipe.</li>
-        <li>Enabled Snowflake cost optimization via auto-suspend & clustering.</li>
-      </ul>
+  <nav>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-      <h3>Aramark, Tampa, FL <small>(Jul 2024 – Dec 2025)</small></h3>
-      <ul>
-        <li>Built large-scale ingestion pipelines using Hadoop (HDFS, Hive, Pig).</li>
-        <li>Implemented real-time data pipelines using Kafka and NiFi.</li>
-        <li>Created dimensional models for BI using SparkSQL and Hive Metastore.</li>
-        <li>Collaborated on Jenkins/Git CI/CD deployments with DevOps.</li>
-      </ul>
+  <section id="work">
+    <h2>My Work</h2>
+    <div class="work-grid">
+      <div class="work-item">
+        <h3>Vinik Sports Group</h3>
+        <p>Engineered robust data pipelines using Snowflake with AWS S3 integration. Reduced report load time by 40% through optimized SQL scripts.</p>
+      </div>
+      <div class="work-item">
+        <h3>Aramark</h3>
+        <p>Built large-scale ingestion pipelines using Hadoop (HDFS, Hive, Pig). Implemented real-time data pipelines using Kafka and NiFi.</p>
+      </div>
+      <div class="work-item">
+        <h3>Tata Elxsi</h3>
+        <p>Built ETL workflows from Oracle DB to staging for analytics. Developed Tableau dashboards for churn & conversion metrics.</p>
+      </div>
+    </div>
+  </section>
 
-      <h3>Tata Elxsi, Pune, India <small>(Oct 2022 – May 2023)</small></h3>
-      <ul>
-        <li>Built ETL workflows from Oracle DB to staging for analytics.</li>
-        <li>Developed Tableau dashboards for churn & conversion metrics.</li>
-        <li>Explored Hadoop-based survey analysis and Snowflake trials.</li>
-      </ul>
-    </section>
+  <section id="resume">
+    <h2>Resume</h2>
+    <div class="resume">
+      <h3>Education</h3>
+      <p><strong>University of South Florida</strong>, MS in Business Analytics & IS – May 2025</p>
+      <p><strong>Saveetha University</strong>, BE in Biomedical Engineering – May 2022</p>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>University of South Florida</strong>, MS in Business Analytics & IS – <em>May 2025</em></p>
-      <p><strong>Saveetha University</strong>, BE in Biomedical Engineering – <em>May 2022</em></p>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
+      <h3>Skills</h3>
       <p><strong>Languages & Data:</strong> Python, R, SQL, Pandas, NumPy, Excel</p>
       <p><strong>Tools:</strong> Power BI, Tableau, Docker, Git, Jira, Confluence</p>
       <p><strong>Cloud & DevOps:</strong> AWS (S3, EC2, Lambda), Azure, Terraform, OpenShift</p>
       <p><strong>Big Data:</strong> Hadoop, Spark, Hive, Kafka, NiFi, MapReduce</p>
       <p><strong>Other:</strong> ETL, Agile, KPI Reporting, Data Governance</p>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p class="contact">
-        📍 Tampa, FL<br>
-        📞 +1-813-3979-756<br>
-        📧 <a href="mailto:hemusaiprakashreddy@usf.edu">hemusaiprakashreddy@usf.edu</a><br>
-        🔗 <a href="https://www.linkedin.com/in/hemusaiprakashreddydevarapalli" target="_blank">LinkedIn Profile</a>
-      </p>
-    </section>
-  </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <form action="mailto:hemusaiprakashreddy@usf.edu" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required/>
+        <input type="email" name="email" placeholder="Your Email" required/>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Hemu Sai Prakashreddy. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
